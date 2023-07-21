@@ -22,7 +22,7 @@ pipeline {
         steps{ 
             sh 'npm install'
             //sh 'npm install -g @angular/cli@1.0.2'
-            sh 'ng --version'
+            sh 'ng version'
         }
         /*}*/
     }
@@ -30,7 +30,7 @@ pipeline {
     stage('Build') {
          steps{
         milestone(20)
-        sh 'ng build --prod'
+        sh 'ng build'
          }
     }
 
